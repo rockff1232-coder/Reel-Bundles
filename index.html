@@ -4,244 +4,287 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Reel Bundles — Hulku AI Reels Bundle🔥</title>
-  <meta name="description" content="Hulku AI Reels Bundle — 500+ reels, instant delivery. Only ₹49." />
+  <meta name="description" content="Hulku AI Reels Bundle — 500+ reels, instant use. Only ₹49." />
 
   <style>
     :root{
       --bg:#070A12;
       --card:#0B1224;
-      --muted:#9AA4B2;
       --text:#EAF0FF;
+      --muted:#9AA4B2;
       --brand:#7C5CFF;
       --brand2:#00D4FF;
-      --ring: rgba(124,92,255,.35);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 18px;
+      --ring:rgba(124,92,255,.35);
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --radius:18px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
       background:
-        radial-gradient(1000px 600px at 20% 10%, rgba(124,92,255,.22), transparent 60%),
-        radial-gradient(900px 540px at 80% 20%, rgba(0,212,255,.16), transparent 60%),
-        radial-gradient(800px 500px at 50% 90%, rgba(124,92,255,.14), transparent 55%),
+        radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.25), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(0,212,255,.20), transparent 60%),
+        radial-gradient(900px 600px at 50% 120%, rgba(124,92,255,.18), transparent 60%),
         var(--bg);
       color:var(--text);
       overflow-x:hidden;
     }
-    a{color:inherit;text-decoration:none}
-    .container{width:min(1100px, 92vw); margin-inline:auto}
-
-    /* NAV */
+    a{color:inherit; text-decoration:none}
+    .container{width:min(1080px, 92vw); margin:0 auto}
     .nav{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(12px);
       background: rgba(7,10,18,.55);
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
     .nav-inner{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
+      gap:14px;
     }
     .brand{
-      display:flex; gap:10px; align-items:center; font-weight:800;
+      display:flex; align-items:center; gap:10px;
       letter-spacing:.2px;
     }
-
     /* LOGO image */
     .logo{
       width:46px; height:46px;
       border-radius:14px;
       overflow:hidden;
       border:1px solid rgba(255,255,255,.14);
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
       background: rgba(255,255,255,.06);
-      flex: 0 0 auto;
+      flex:0 0 auto;
     }
-    .logo img{
+    .logo img{width:100%; height:100%; object-fit:cover; display:block}
+
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav-links a{opacity:.88; font-weight:700; font-size:14px}
+    .nav-links a:hover{opacity:1; color:var(--brand2)}
+
+    .btn{
+      border:none; cursor:pointer;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:900;
+      color:var(--text);
+      transition:.2s transform, .2s filter, .2s opacity;
+      user-select:none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:active{transform:scale(.98)}
+    .btn.primary{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 14px 40px rgba(124,92,255,.22);
+    }
+    .btn.ghost{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .btn.whatsapp{
+      background: rgba(37, 211, 102, .12);
+      border:1px solid rgba(37,211,102,.30);
+    }
+    .btn.whatsapp:hover{filter:brightness(1.06)}
+    .btn.ghost:hover{filter:brightness(1.08)}
+
+    .hero{padding:34px 0 18px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .card{
+      background: rgba(11,18,36,.75);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .glow{
+      position:absolute; inset:-120px -120px auto auto;
+      width:280px; height:280px;
+      background: radial-gradient(circle at 30% 30%, rgba(0,212,255,.35), transparent 65%),
+                  radial-gradient(circle at 70% 70%, rgba(124,92,255,.35), transparent 65%);
+      filter: blur(10px);
+      opacity:.75;
+      pointer-events:none;
+    }
+    .hero-left{padding:26px}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:800;
+      color: rgba(234,240,255,.92);
+      margin-bottom:16px;
+      max-width:100%;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow:0 0 0 6px rgba(124,92,255,.18);
+      flex:0 0 auto;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: 44px;
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-weight:700;
+      line-height:1.6;
+      font-size:16px;
+    }
+    .price{
+      display:flex; align-items:baseline; gap:12px; margin:18px 0 14px;
+      flex-wrap:wrap;
+    }
+    .now{
+      font-size:44px;
+      font-weight:1000;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .was{
+      font-weight:900;
+      color: rgba(234,240,255,.35);
+      text-decoration: line-through;
+      font-size:20px;
+    }
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .btn.pulse{
+      position:relative;
+      isolation:isolate;
+    }
+    .btn.pulse:before{
+      content:"";
+      position:absolute; inset:-2px;
+      border-radius:16px;
+      background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(0,212,255,.35));
+      filter: blur(12px);
+      opacity:.55;
+      z-index:-1;
+      animation:pulse 1.8s infinite ease-in-out;
+    }
+    @keyframes pulse{
+      0%,100%{transform:scale(1); opacity:.55}
+      50%{transform:scale(1.05); opacity:.35}
+    }
+
+    .mini{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:16px;
+      color: rgba(234,240,255,.78);
+      font-weight:800;
+      font-size:14px;
+    }
+    .mini span{
+      padding:10px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+    }
+
+    /* Right card preview image */
+    .hero-right{padding:18px}
+    .preview-wrap{
+      display:flex; flex-direction:column;
+      gap:12px;
+      padding:16px;
+    }
+    .preview-title{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px;
+      font-weight:1000;
+    }
+    .preview-title small{color:var(--muted); font-weight:800}
+    .preview-img{
+      width:100%;
+      aspect-ratio: 1/1;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 16px 50px rgba(0,0,0,.38);
+      position:relative;
+    }
+    .preview-img img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
+      transform: scale(1.02);
     }
-
-    .nav-links{display:flex; gap:18px; align-items:center; color:var(--muted); font-weight:700}
-    .nav-links a{opacity:.9}
-    .nav-links a:hover{opacity:1; color:var(--text)}
-
-    .btn{
-      border:none; cursor:pointer;
-      padding:12px 16px; border-radius:14px;
-      font-weight:900;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color:#07101a;
-      box-shadow: 0 16px 40px rgba(124,92,255,.28);
-      transform: translateZ(0);
-    }
-    .btn:hover{filter:saturate(1.08) brightness(1.02)}
-    .btn:active{transform: translateY(1px)}
-    .ghost{
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow:none;
-    }
-
-    /* HERO */
-    .hero{padding:56px 0 28px}
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:26px;
-      align-items:center;
-    }
-    .pill{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:10px 14px; border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      color: var(--muted);
+    .preview-note{
+      color: rgba(234,240,255,.72);
       font-weight:800;
-    }
-    .dot{
-      width:10px;height:10px;border-radius:50%;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow: 0 0 0 6px rgba(124,92,255,.12);
-    }
-    h1{
-      margin:18px 0 10px;
-      font-size: clamp(34px, 4.6vw, 58px);
-      line-height:1.04;
-      letter-spacing:-.7px;
-    }
-    .sub{
-      color: rgba(234,240,255,.78);
-      font-size: 16px;
-      line-height:1.6;
-      margin: 10px 0 0;
-    }
-    .price{
-      display:flex; align-items:baseline; gap:14px; margin:20px 0 8px;
-      font-weight:1000;
-    }
-    .price .now{font-size:44px; color: #6CD2FF}
-    .price .was{font-size:18px; color: rgba(234,240,255,.55); text-decoration:line-through}
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-    .pulse{position:relative}
-    .pulse:before{
-      content:""; position:absolute; inset:-6px;
-      border-radius:18px; background: rgba(124,92,255,.22);
-      filter: blur(10px);
-      animation:pulse 1.8s infinite;
-      z-index:-1;
-    }
-    @keyframes pulse{
-      0%{transform:scale(.96); opacity:.55}
-      60%{transform:scale(1.04); opacity:.16}
-      100%{transform:scale(.96); opacity:.55}
+      font-size:14px;
+      line-height:1.5;
     }
 
-    .mini{
-      display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;
-      color: rgba(234,240,255,.78);
-      font-weight:800;
-    }
-    .mini span{
-      display:flex; align-items:center; gap:8px;
-      padding:10px 12px;
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-
-    /* Right card */
-    .card{
-      position:relative;
-      background: rgba(11,18,36,.82);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .glow{
-      position:absolute; inset:-120px;
-      background:
-        radial-gradient(closest-side, rgba(124,92,255,.26), transparent 65%),
-        radial-gradient(closest-side, rgba(0,212,255,.18), transparent 65%);
-      filter: blur(8px);
-      animation: float 8s ease-in-out infinite;
-    }
-    @keyframes float{
-      0%,100%{transform:translate(0,0)}
-      50%{transform:translate(18px, -12px)}
-    }
-    .side{
-      padding:18px;
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    .preview-img{
-      width:100%;
-      border-radius:16px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-    }
-    .preview-img img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
-    .side h3{margin:0; font-size:18px}
-    .side p{margin:0; color:rgba(234,240,255,.72); line-height:1.55}
-    .sep{height:1px; background:rgba(255,255,255,.08); margin:6px 0}
-
-    /* Sections */
-    section{padding:26px 0}
+    .section{padding:18px 0}
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
-      margin-top:14px;
     }
-    .feat{
+    .feat{padding:18px}
+    .feat h3{margin:0 0 6px; font-size:16px; font-weight:1000}
+    .feat p{margin:0; color:var(--muted); font-weight:700; line-height:1.55; font-size:14px}
+
+    .faq{padding:18px}
+    .faq h2{margin:0 0 10px; font-size:22px; font-weight:1000}
+    details{
       background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px;
-      padding:16px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;
+      padding:12px 14px;
+      margin:10px 0;
     }
-    .feat b{display:block; margin-bottom:6px}
-    .feat span{color:rgba(234,240,255,.72); line-height:1.55}
+    summary{cursor:pointer; font-weight:900}
+    details p{color:var(--muted); font-weight:700; line-height:1.6}
 
-    /* Footer */
-    footer{
-      padding:26px 0 40px;
-      color:rgba(234,240,255,.55);
+    .footer{
+      padding:24px 0 34px;
+      color: rgba(234,240,255,.55);
+      font-weight:800;
       text-align:center;
+      font-size:13px;
     }
 
-    /* simple reveal */
-    .reveal{opacity:0; transform: translateY(18px); transition: .7s ease}
-    .reveal.show{opacity:1; transform: translateY(0)}
+    /* Reveal animation */
+    .reveal{opacity:0; transform:translateY(18px); transition:.7s ease}
+    .reveal.show{opacity:1; transform:translateY(0)}
 
     @media (max-width: 920px){
       .hero-grid{grid-template-columns:1fr}
+      h1{font-size:38px}
       .nav-links{display:none}
     }
   </style>
 </head>
 
 <body>
+  <!-- NAV -->
   <div class="nav">
     <div class="container nav-inner">
       <div class="brand">
+        <!-- TOP LOGO: uses preview1.png -->
         <div class="logo"><img src="./preview1.png" alt="Reel Bundles"></div>
         <div>
-          <div style="font-size:15px;line-height:1">Reel Bundles</div>
+          <div style="font-size:15px;line-height:1;font-weight:1000">Reel Bundles</div>
           <div style="font-size:12px;color:var(--muted);font-weight:800">Instant Digital Delivery</div>
         </div>
       </div>
@@ -256,29 +299,33 @@
     </div>
   </div>
 
+  <!-- HERO -->
   <div class="container hero">
     <div class="hero-grid">
-      <div class="reveal">
-        <div class="pill"><span class="dot"></span> Trending • 500+ Ready-to-Post Reels</div>
+      <div class="card hero-left reveal">
+        <div class="glow"></div>
+
+        <div class="pill">
+          <span class="dot"></span>
+          Trending • 500+ Ready-to-Post Reels
+        </div>
 
         <h1>Hulku AI Reels Bundle 🔥<br/>Daily posting ab easy.</h1>
-
         <p class="sub">
-          500+ high-performing reels (AI niche). Instant download.
+          500+ high-performing reels (AI niche). Instant use.
           <br/>
           <b>Payment ke baad WhatsApp par screenshot + UTR bhejo, link mil jayega.</b>
         </p>
 
-        <div class="price">
+        <div class="price" id="pay">
           <div class="now">₹49</div>
           <div class="was">₹199</div>
           <div style="color:var(--muted);font-weight:900">Limited time</div>
         </div>
 
-        <div class="cta-row" id="pay">
-          <button class="btn pulse" onclick="payUPI()">Pay ₹49 via UPI</button>
-          <button class="btn ghost" onclick="manualPay()">Manual Pay (UPI ID)</button>
-          <button class="btn ghost" onclick="sendWhatsApp()">Send Screenshot on WhatsApp</button>
+        <div class="cta-row">
+          <button class="btn primary pulse" onclick="payUPI()">Pay ₹49 via UPI</button>
+          <button class="btn whatsapp" onclick="whatsappNow()">Send Screenshot on WhatsApp</button>
         </div>
 
         <div class="mini">
@@ -288,130 +335,124 @@
         </div>
       </div>
 
-      <div class="card reveal" id="preview">
-        <div class="glow"></div>
-        <div class="side">
-          <h3>Bundle Preview</h3>
-          <p>Yahi preview image tumhare product ke साथ show hogi.</p>
-          <div class="sep"></div>
-          <div class="preview-img">
-            <img src="./preview1.png" alt="Hulku AI Bundle Preview">
+      <!-- PREVIEW -->
+      <div class="card hero-right reveal" id="preview">
+        <div class="glow" style="inset:auto auto -140px -140px; opacity:.65;"></div>
+        <div class="preview-wrap">
+          <div class="preview-title">
+            <div>Bundle Preview</div>
+            <small>Hulk Bundle</small>
           </div>
-          <div class="sep"></div>
-          <p style="font-weight:800;color:rgba(234,240,255,.78)">
-            After payment, WhatsApp par UTR + screenshot भेजो — delivery instant.
-          </p>
+
+          <div class="preview-img">
+            <!-- MAIN PREVIEW IMAGE -->
+            <img src="./preview1.png" alt="Hulku AI Reels Bundle Preview">
+          </div>
+
+          <div class="preview-note">
+            Ye sirf preview hai. Real bundle me 500+ reels milenge.
+            Payment ke baad WhatsApp par UTR + screenshot bhejo.
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <section id="features" class="reveal">
-      <h2 style="margin:0 0 8px; letter-spacing:-.3px">What you get</h2>
-      <div style="color:rgba(234,240,255,.72); line-height:1.55">
-        Is bundle me ready-to-post reels milenge jo daily posting ko super easy bana देंगे.
+  <!-- FEATURES -->
+  <div class="container section" id="features">
+    <div class="grid3">
+      <div class="card feat reveal">
+        <h3>500+ Reels</h3>
+        <p>Ready-to-post content — daily consistency easy.</p>
       </div>
-
-      <div class="grid3">
-        <div class="feat">
-          <b>500+ Reels</b>
-          <span>Daily posting ke liye bulk content.</span>
-        </div>
-        <div class="feat">
-          <b>Instant Use</b>
-          <span>Download & post — no editing needed.</span>
-        </div>
-        <div class="feat">
-          <b>Support</b>
-          <span>Issue ho to WhatsApp par help.</span>
-        </div>
+      <div class="card feat reveal">
+        <h3>Instant Use</h3>
+        <p>Download karke direct post karo. Time save.</p>
       </div>
-    </section>
-
-    <section id="faq" class="reveal">
-      <h2 style="margin:0 0 8px; letter-spacing:-.3px">FAQ</h2>
-
-      <div class="feat" style="margin-top:12px">
-        <b>Payment ke baad link kaise milega?</b>
-        <span>Pay करने के बाद WhatsApp पर screenshot + UTR भेजो, फिर तुम्हें drive link instantly send kar denge.</span>
+      <div class="card feat reveal">
+        <h3>Support on WhatsApp</h3>
+        <p>Payment proof bhejo, link turant share kiya jayega.</p>
       </div>
-
-      <div class="feat" style="margin-top:12px">
-        <b>UPI button kaam nahi kare to?</b>
-        <span>“Manual Pay (UPI ID)” दबाओ — UPI ID + note WhatsApp पर auto chala जाएगा.</span>
-      </div>
-
-      <div class="feat" style="margin-top:12px">
-        <b>Delivery Link</b>
-        <span>Secure delivery WhatsApp par verification ke baad hoti है.</span>
-      </div>
-    </section>
+    </div>
   </div>
 
-  <footer>
-    © <span id="yr"></span> Reel Bundles • Support: WhatsApp 9699252433
-  </footer>
+  <!-- FAQ -->
+  <div class="container section" id="faq">
+    <div class="card faq reveal">
+      <h2>FAQ</h2>
 
-<script>
-  // ====== YOUR DETAILS ======
-  const BRAND_NAME = "Reel Bundles";
-  const PRODUCT_NAME = "Hulku AI Reels Bundle🔥";
-  const PRICE = "49";
-  const UPI_ID = "9699252433@fam";
-  const WHATSAPP = "919699252433"; // +91
-  const DELIVERY_LINK = "https://drive.google.com/drive/folders/1d6UUE7y7FKoPJ-dDh1vHH9GkQf-Ol4su";
+      <details>
+        <summary>Payment kaise karu?</summary>
+        <p>“Pay ₹49 via UPI” dabao. UPI app open hoga (GPay/PhonePe/Paytm). Pay karke screenshot + UTR WhatsApp par bhejo.</p>
+      </details>
 
-  // ====== SCROLL ======
-  function scrollToPay(){
-    document.querySelector("#pay").scrollIntoView({behavior:"smooth", block:"center"});
-  }
+      <details>
+        <summary>Link kaise milega?</summary>
+        <p>Payment ke baad WhatsApp button se message chala jayega. Tum UTR + screenshot bhej do, delivery link share kar diya jayega.</p>
+      </details>
 
-  // ====== PAY (UPI intent) ======
-  function payUPI(){
-    // Simple and compatible UPI intent
-    const url = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(BRAND_NAME)}&am=${encodeURIComponent(PRICE)}&cu=INR&tn=${encodeURIComponent(PRODUCT_NAME+" - "+BRAND_NAME)}`;
-    window.location.href = url;
-  }
+      <details>
+        <summary>Already paid option kahan hai?</summary>
+        <p>Wo remove kar diya hai ✅ Ab direct link open nahi hota.</p>
+      </details>
+    </div>
+  </div>
 
-  // ====== MANUAL PAY (WhatsApp message with UPI ID + note) ======
-  function manualPay(){
-    const msg =
-`Hi ${BRAND_NAME},
-Mujhe "${PRODUCT_NAME}" chahiye.
-Amount: ₹${PRICE}
-UPI ID: ${UPI_ID}
-Note: ${PRODUCT_NAME} - ${BRAND_NAME}
+  <div class="footer">
+    © Reel Bundles • Digital Product • WhatsApp Support: 9699252433
+  </div>
 
-Payment karke main UTR + screenshot bhej raha/rahi hoon.`;
-    const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
-    window.open(wa, "_blank");
-  }
+  <script>
+    // Smooth scroll to payment
+    function scrollToPay(){
+      const el = document.getElementById("pay");
+      if(el) el.scrollIntoView({behavior:"smooth", block:"center"});
+    }
 
-  // ====== SEND SCREENSHOT (WhatsApp) ======
-  function sendWhatsApp(){
-    const msg =
-`Hi ${BRAND_NAME},
-Maine ₹${PRICE} payment kar diya hai ✅
-Product: ${PRODUCT_NAME}
+    // ✅ FIXED UPI PAYMENT (no QR/gallery flow)
+    function payUPI(){
+      const upiId = "9699252433@fam";
+      const name  = "Reel Bundles";
+      const amount = "49";
+      const note = "Hulku AI Reels Bundle🔥 - Reel Bundles";
 
-UTR:
-Screenshot: (attach)
+      const url =
+        "upi://pay" +
+        "?pa=" + encodeURIComponent(upiId) +
+        "&pn=" + encodeURIComponent(name) +
+        "&am=" + encodeURIComponent(amount) +
+        "&cu=INR" +
+        "&tn=" + encodeURIComponent(note);
 
-Please instant delivery link bhej do.`;
-    const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
-    window.open(wa, "_blank");
-  }
+      // Open UPI apps
+      window.location.href = url;
 
-  // ====== ANIMATIONS ======
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting) e.target.classList.add("show");
-    });
-  }, {threshold:.15});
+      // fallback message (in case browser blocks)
+      setTimeout(() => {
+        alert("Agar UPI app open nahi ho rahi, to manually UPI ID: " + upiId + " par ₹49 pay karo, phir WhatsApp par UTR + screenshot bhejo.");
+      }, 1200);
+    }
 
-  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-  document.getElementById("yr").textContent = new Date().getFullYear();
-</script>
+    // WhatsApp auto message
+    function whatsappNow(){
+      const phone = "919699252433"; // +91 included
+      const msg =
+        "Hi Reel Bundles ✅\n" +
+        "Maine ₹49 payment kar diya.\n\n" +
+        "Product: Hulku AI Reels Bundle🔥\n" +
+        "UTR: __________\n\n" +
+        "Screenshot: (attach)\n\n" +
+        "Please delivery link bhej do.";
+      window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank");
+    }
+
+    // reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add("show");
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
