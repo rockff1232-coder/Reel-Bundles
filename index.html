@@ -2,376 +2,364 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Reel Bundles — Hulku AI Reels Bundle</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reel Bundles - Hulku AI Reels Bundle</title>
+  <meta name="description" content="Hulku AI Reels Bundle - 500+ reels. Instant use. Pay ₹49 via UPI/PhonePe." />
+
   <style>
     :root{
-      --bg1:#060a14; --bg2:#0b1730;
-      --text:#eaf2ff; --muted: rgba(234,242,255,.7);
-      --accent:#2aa8ff; --good:#27d17d;
-      --shadow: 0 18px 45px rgba(0,0,0,.55);
-      --radius: 18px;
+      --bg:#0b0b12;
+      --text:#ffffff;
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.55);
+      --stroke:rgba(255,255,255,.12);
+      --btn:#6d5cff;
     }
+
     *{box-sizing:border-box}
     body{
-      margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(109,92,255,.35), transparent 60%),
+                  radial-gradient(800px 600px at 90% 10%, rgba(0,255,170,.18), transparent 60%),
+                  var(--bg);
       color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 15% 20%, rgba(42,168,255,.18), transparent 60%),
-        radial-gradient(900px 600px at 80% 10%, rgba(122,92,255,.18), transparent 55%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
-      min-height:100vh;
-    }
-    .wrap{max-width:920px;margin:0 auto;padding:18px 14px 40px}
-    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 10px 14px}
-    .brand{display:flex;gap:10px;align-items:center}
-    .logo{
-      width:44px;height:44px;border-radius:14px;
-      background: radial-gradient(circle at 30% 30%, rgba(39,209,125,.35), transparent 55%),
-                  radial-gradient(circle at 70% 70%, rgba(42,168,255,.35), transparent 55%),
-                  rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      display:grid;place-items:center;font-weight:800;
-    }
-    .brand h1{font-size:16px;margin:0;line-height:1.05}
-    .brand p{margin:0;color:var(--muted);font-size:12px}
-    .btn{
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      padding:10px 14px;border-radius:999px;
-      font-weight:700;cursor:pointer;
-    }
-    .hero{padding:18px 10px 6px;display:grid;gap:14px}
-    .tag{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:10px 12px;border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      width:fit-content;color:var(--muted);font-weight:700;
-    }
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(42,168,255,.55)}
-    .title{font-size:46px;line-height:1.02;margin:0;letter-spacing:-.6px}
-    @media(max-width:420px){.title{font-size:40px}}
-    .subtitle{margin:0;color:var(--muted);font-size:16px;line-height:1.5;font-weight:600}
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-      padding:16px;
     }
 
-    /* Preview movement */
-    .previewTitle{margin:0 0 10px;font-size:22px;letter-spacing:-.2px}
-    .previewNote{margin:0 0 14px;color:var(--muted);font-weight:600}
-    .previewStage{
-      position:relative;border-radius:18px;padding:14px;
-      background: radial-gradient(600px 280px at 50% 20%, rgba(42,168,255,.14), transparent 60%),
-                  rgba(0,0,0,.12);
-      border:1px solid rgba(255,255,255,.08);
-      overflow:hidden; perspective:900px;
+    /* TOP BAR */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,11,18,.65);
+      border-bottom:1px solid var(--stroke);
     }
-    .previewGlow{
-      position:absolute; inset:-40%;
-      background: radial-gradient(circle at 30% 40%, rgba(42,168,255,.22), transparent 45%),
-                  radial-gradient(circle at 70% 60%, rgba(122,92,255,.20), transparent 50%);
-      filter: blur(14px);
-      animation: glowMove 5.5s ease-in-out infinite alternate;
-      pointer-events:none;
+    .brand{
+      max-width:980px;
+      margin:0 auto;
+      padding:14px 16px;
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
-    @keyframes glowMove{from{transform: translate(-2%,-1%) scale(1);}to{transform: translate(2%,2%) scale(1.06);}}
-    .previewFloat{
-      position:relative; transform-style: preserve-3d;
-      animation: floatY 3.6s ease-in-out infinite;
-      will-change: transform;
+    .brand-logo{
+      width:42px;
+      height:42px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid var(--stroke);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      background: rgba(255,255,255,.05);
     }
-    @keyframes floatY{
-      0%{transform: translateY(0px) rotateX(0deg) rotateY(0deg);}
-      50%{transform: translateY(-8px) rotateX(1.2deg) rotateY(-1.2deg);}
-      100%{transform: translateY(0px) rotateX(0deg) rotateY(0deg);}
+    .brand-name{
+      font-size:18px;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+    .brand-tag{
+      font-size:12px;
+      color:var(--muted2);
+      margin-top:2px;
+    }
+
+    /* LAYOUT */
+    .wrap{
+      max-width:980px;
+      margin:18px auto 60px;
+      padding:0 16px;
+      display:grid;
+      gap:16px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:26px;
+      line-height:1.2;
+    }
+    .sub{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* PREVIEW */
+    .previewBox{
+      margin:18px 0 10px;
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--stroke);
+      background: rgba(0,0,0,.18);
     }
     .previewImg{
-      width:100%; border-radius:16px; border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.2); display:block;
-      box-shadow: 0 18px 40px rgba(0,0,0,.35);
-      transform: translateZ(24px);
+      width:100%;
+      display:block;
+      transform: scale(1.02);
     }
-    .shine{
-      position:absolute; inset:0; border-radius:16px;
-      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.10) 45%, transparent 70%);
-      transform: translateX(-60%) translateZ(30px);
-      animation: shineSweep 3.8s ease-in-out infinite;
-      mix-blend-mode: screen; pointer-events:none;
-    }
-    @keyframes shineSweep{
-      0%{transform: translateX(-70%) translateZ(30px); opacity:0;}
-      35%{opacity:.35;}
-      60%{opacity:.25;}
-      100%{transform: translateX(70%) translateZ(30px); opacity:0;}
-    }
-    @media (prefers-reduced-motion: reduce){
-      .previewGlow,.previewFloat,.shine{animation:none !important}
+    .previewHint{
+      position:absolute;
+      right:10px;
+      bottom:10px;
+      padding:6px 10px;
+      font-size:12px;
+      border-radius:999px;
+      background: rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.18);
     }
 
-    .priceRow{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-top:6px}
-    .price{font-size:54px;font-weight:900;letter-spacing:-1px;color:#55d6ff;text-shadow:0 10px 28px rgba(42,168,255,.25)}
-    .mrp{color:rgba(234,242,255,.45);text-decoration:line-through;font-weight:800;margin-bottom:10px}
-    .limited{color:rgba(234,242,255,.75);font-weight:800;margin-bottom:10px}
-
-    .payGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-    @media(max-width:520px){.payGrid{grid-template-columns:1fr}}
-    .payBtn{
-      padding:14px 14px;border-radius:14px;font-weight:900;font-size:16px;
-      border:1px solid rgba(255,255,255,.14);
-      cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
-      user-select:none;
-    }
-    .payPrimary{
-      background: linear-gradient(90deg, rgba(42,168,255,.95), rgba(42,168,255,.62));
-      border-color: rgba(42,168,255,.55);
-      color:#031025;
-      box-shadow: 0 14px 30px rgba(42,168,255,.18);
-    }
-    .paySecondary{background: rgba(255,255,255,.06);color:var(--text)}
-
-    .miniGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-    @media(max-width:520px){.miniGrid{grid-template-columns:1fr}}
-    .pill{
-      padding:12px 12px;border-radius:14px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      font-weight:800;cursor:pointer;text-align:center;
+    /* FLOAT ANIM */
+    .floaty{ animation: floaty 2.8s ease-in-out infinite; }
+    @keyframes floaty{
+      0%{ transform: translateY(0px); }
+      50%{ transform: translateY(-8px); }
+      100%{ transform: translateY(0px); }
     }
 
-    .features{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .feat{
-      display:flex;gap:10px;align-items:center;
-      padding:10px 12px;border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      font-weight:800;color:rgba(234,242,255,.85);
+    /* PRICE */
+    .priceRow{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      margin-top:8px;
+      flex-wrap:wrap;
     }
-    .check{
-      width:18px;height:18px;border-radius:6px;background:rgba(39,209,125,.18);
-      border:1px solid rgba(39,209,125,.55);
-      display:grid;place-items:center;color:var(--good);font-weight:1000;
+    .price{ font-size:34px; font-weight:900; }
+    .strike{
+      color:var(--muted2);
+      text-decoration:line-through;
+      font-size:14px;
+    }
+    .off{
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:999px;
+      background: rgba(0,255,170,.14);
+      border:1px solid rgba(0,255,170,.25);
+      color: rgba(0,255,170,.95);
     }
 
-    .faq h3{margin:0 0 10px;font-size:22px}
-    details{background: rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:12px 12px;margin-top:10px}
-    summary{cursor:pointer;font-weight:900}
-    .ans{color:var(--muted);font-weight:650;margin-top:10px;line-height:1.6}
-
-    .toast{
-      position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
-      background: rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.14);
-      padding:10px 14px;border-radius:999px;font-weight:800;
-      opacity:0;pointer-events:none;transition:opacity .25s ease;
+    /* BUTTONS */
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      margin:14px 0 10px;
+      flex-wrap:wrap;
     }
-    .toast.show{opacity:1}
-    .small{font-size:12px;color:rgba(234,242,255,.6);font-weight:650;margin-top:10px}
+    button{
+      border:none;
+      cursor:pointer;
+      font-weight:900;
+      border-radius:14px;
+      padding:12px 14px;
+      transition:.2s transform, .2s opacity;
+    }
+    button:active{ transform: scale(.98); }
+    .btnPrimary{
+      background: var(--btn);
+      color:#fff;
+      box-shadow: 0 18px 40px rgba(109,92,255,.25);
+    }
+    .btnGhost{
+      background: rgba(255,255,255,.08);
+      color:#fff;
+      border:1px solid var(--stroke);
+    }
+
+    /* UPI BOX */
+    .upiBox{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px dashed rgba(255,255,255,.22);
+      background: rgba(255,255,255,.04);
+    }
+    .upiLabel{ color:var(--muted2); font-size:13px; }
+    .upiValue{
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.3px;
+      word-break: break-all;
+    }
+
+    /* QR */
+    .or{
+      text-align:center;
+      color:var(--muted2);
+      margin:14px 0 10px;
+      font-size:12px;
+    }
+    .qrBox{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:8px;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid var(--stroke);
+      background: rgba(0,0,0,.18);
+    }
+    .qrImg{
+      width:220px;
+      max-width:70vw;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.15);
+    }
+    .qrNote{ font-size:12px; color:var(--muted2); }
+
+    .status{
+      margin-top:12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* INFO */
+    .card.info h2{ margin:0 0 8px; }
+    .card.info p{ margin:8px 0; color:var(--muted); }
+    .small{ font-size:12px; color:var(--muted2); }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo">RB</div>
-        <div>
-          <h1>Reel Bundles</h1>
-          <p>Instant Digital Delivery</p>
-        </div>
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo.png" class="brand-logo" alt="Reel Bundles Logo" />
+      <div class="brand-text">
+        <div class="brand-name">Reel Bundles</div>
+        <div class="brand-tag">Instant delivery after payment</div>
       </div>
-      <button class="btn" onclick="scrollToPay()">Buy Now</button>
     </div>
+  </header>
 
-    <section class="hero">
-      <div class="tag"><span class="dot"></span> Trending • 500+ Ready-to-Post Reels</div>
-      <h2 class="title">Hulku AI Reels Bundle 🔥<br/>Daily posting ab easy.</h2>
-      <p class="subtitle">
-        500+ high-performing reels (AI niche). Instant download.<br/>
-        Payment ke baad WhatsApp par screenshot + UTR bhejo, link mil jayega.
-      </p>
-
-      <div class="card" id="preview">
-        <h3 class="previewTitle">Bundle Preview</h3>
-        <p class="previewNote">Ye preview image customer ko trust degi.</p>
-
-        <div class="previewStage" id="previewStage">
-          <div class="previewGlow"></div>
-          <div class="previewFloat" id="previewFloat">
-            <img class="previewImg" src="preview1.png" alt="Bundle Preview" />
-            <div class="shine"></div>
-          </div>
+  <main class="wrap">
+    <section class="card">
+      <div class="hero">
+        <div class="title">
+          <h1>Hulku AI Reels Bundle 🔥</h1>
+          <p class="sub">✅ 500+ reels • ✅ Instant use • ✅ Perfect for daily posting</p>
         </div>
-      </div>
 
-      <div class="card" id="pay">
+        <div class="previewBox floaty">
+          <img src="preview1.png" alt="Bundle Preview" class="previewImg" />
+          <div class="previewHint">Preview</div>
+        </div>
+
         <div class="priceRow">
           <div class="price">₹49</div>
-          <div class="mrp">₹199</div>
-          <div class="limited">Limited time</div>
+          <div class="strike">₹499</div>
+          <div class="off">90% OFF</div>
         </div>
 
-        <div class="payGrid">
-          <button class="payBtn payPrimary" onclick="payPhonePe()">Pay ₹49 (PhonePe)</button>
-          <button class="payBtn paySecondary" onclick="payAnyUpi()">Pay via Any UPI</button>
+        <div class="ctaRow">
+          <button id="payBtn" class="btnPrimary">Pay with PhonePe / UPI</button>
+          <button id="copyBtn" class="btnGhost">Copy UPI</button>
         </div>
 
-        <div class="miniGrid">
-          <div class="pill" onclick="showQR()">Show QR (Optional)</div>
-          <div class="pill" onclick="openWhatsApp()">Send Screenshot on WhatsApp</div>
+        <div class="upiBox">
+          <div class="upiLabel">UPI ID:</div>
+          <div class="upiValue" id="upiText">9699252433-2@ybl</div>
         </div>
 
-        <div class="features">
-          <div class="feat"><span class="check">✓</span> Instant Delivery</div>
-          <div class="feat"><span class="check">✓</span> Lifetime Access</div>
-          <div class="feat"><span class="check">✓</span> Support Included</div>
+        <div class="or">OR</div>
+
+        <div class="qrBox">
+          <img src="qr.png" alt="QR Code" class="qrImg" />
+          <div class="qrNote">Scan QR to pay</div>
         </div>
 
-        <div class="small">
-          Note: UPI security ke hisaab se payment app me confirm karna padta hai, lekin button se app direct open hoga aur amount auto-fill hoga.
-        </div>
-      </div>
-
-      <div class="card faq" id="faq">
-        <h3>FAQ</h3>
-
-        <details>
-          <summary>Payment kaise karu?</summary>
-          <div class="ans">
-            “Pay ₹49 (PhonePe)” dabao → PhonePe open hoga → UPI pin dalke payment confirm karo.
-            Agar PhonePe nahi hai, “Pay via Any UPI” se GPay/Paytm/other UPI apps me pay kar sakte ho.
-          </div>
-        </details>
-
-        <details>
-          <summary>Instant link kaise milega?</summary>
-          <div class="ans">
-            Payment ke baad WhatsApp par <b>screenshot + UTR</b> bhejo. Verify hote hi download link send kar denge.
-          </div>
-        </details>
-
-        <details>
-          <summary>UPI ID kya hai?</summary>
-          <div class="ans">
-            <b>9699252433@fam</b><br/><br/>
-            <button class="btn" onclick="copyVPA()">Copy UPI ID</button>
-          </div>
-        </details>
+        <div class="status" id="status"></div>
       </div>
     </section>
-  </div>
 
-  <div class="toast" id="toast">Copied ✅</div>
-
-  <dialog id="qrModal" style="border:none;border-radius:18px;padding:0;max-width:360px;width:92%;background:rgba(10,14,25,.95);color:#eaf2ff;">
-    <div style="padding:16px;border:1px solid rgba(255,255,255,.10);border-radius:18px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
-        <div style="font-weight:900;font-size:18px;">Scan QR to Pay</div>
-        <button class="btn" onclick="closeQR()">Close</button>
-      </div>
-      <p style="margin:10px 0 12px;color:rgba(234,242,255,.7);font-weight:650;line-height:1.5">
-        Best: Scan with PhonePe/GPay (gallery se upload mat karo).
+    <section class="card info">
+      <h2>Delivery</h2>
+      <p>Payment complete hote hi aapko bundle ka access mil jayega.</p>
+      <p class="small">
+        Agar payment app auto open nahi hota, to “Copy UPI” dabao aur kisi bhi UPI app me paste karke ₹49 pay karo.
       </p>
-      <div style="background:#fff;border-radius:16px;padding:12px;display:grid;place-items:center;">
-        <img src="qr.png" alt="UPI QR" style="width:100%;max-width:280px;display:block;" />
-      </div>
-      <p style="margin:12px 0 0;color:rgba(234,242,255,.6);font-weight:650;font-size:12px">
-        UPI ID: 9699252433@fam • Amount: ₹49
-      </p>
-    </div>
-  </dialog>
+    </section>
+  </main>
 
   <script>
-    const PAYEE_VPA   = "9699252433@fam";
-    const PAYEE_NAME  = "Reel Bundles";
-    const AMOUNT      = "49.00";
-    const NOTE        = "Hulku AI Reels Bundle";
+    // ===== CONFIG =====
+    const UPI_ID = "9699252433-2@ybl";
+    const PAYEE_NAME = "Reel Bundles";
+    const AMOUNT = "49";
+    const NOTE = "Hulku AI Reels Bundle";
 
-    // ✅ WhatsApp number auto set (India)
-    const WHATSAPP_NO = "919699252433";
+    // ===== ELEMENTS =====
+    const payBtn = document.getElementById("payBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const statusEl = document.getElementById("status");
+    const upiText = document.getElementById("upiText");
 
-    function scrollToPay(){
-      document.getElementById("pay").scrollIntoView({behavior:"smooth", block:"start"});
+    upiText.textContent = UPI_ID;
+
+    function setStatus(msg){
+      statusEl.textContent = msg;
     }
 
-    function toast(msg){
-      const t = document.getElementById("toast");
-      t.textContent = msg || "Done ✅";
-      t.classList.add("show");
-      setTimeout(()=>t.classList.remove("show"), 1600);
-    }
-
-    function copyVPA(){
-      navigator.clipboard.writeText(PAYEE_VPA).then(()=>toast("UPI ID Copied ✅"))
-      .catch(()=>toast("Copy failed"));
-    }
-
-    function buildUpiUri(){
-      const params = new URLSearchParams({ pa:PAYEE_VPA, pn:PAYEE_NAME, am:AMOUNT, cu:"INR", tn:NOTE });
+    function buildUpiLink(){
+      const params = new URLSearchParams({
+        pa: UPI_ID,
+        pn: PAYEE_NAME,
+        am: AMOUNT,
+        cu: "INR",
+        tn: NOTE
+      });
       return `upi://pay?${params.toString()}`;
     }
 
-    function buildPhonePeUri(){
-      const params = new URLSearchParams({ pa:PAYEE_VPA, pn:PAYEE_NAME, am:AMOUNT, cu:"INR", tn:NOTE });
-      return `phonepe://pay?${params.toString()}`;
+    // PhonePe first, then UPI fallback
+    function openPayment(){
+      const upiLink = buildUpiLink();
+
+      const phonepeLink =
+        `phonepe://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(PAYEE_NAME)}&am=${encodeURIComponent(AMOUNT)}&cu=INR&tn=${encodeURIComponent(NOTE)}`;
+
+      setStatus("Opening PhonePe…");
+
+      // Attempt 1
+      window.location.href = phonepeLink;
+
+      // Attempt 2
+      setTimeout(() => {
+        setStatus("If PhonePe didn't open, trying UPI apps…");
+        window.location.href = upiLink;
+      }, 900);
+
+      // Final hint
+      setTimeout(() => {
+        setStatus("If app still didn't open, tap 'Copy UPI' and pay ₹49 manually.");
+      }, 2400);
     }
 
-    function openUri(primaryUri, fallbackUri){
-      window.location.href = primaryUri;
-      setTimeout(()=>{ window.location.href = fallbackUri; }, 900);
-    }
-
-    function payPhonePe(){ openUri(buildPhonePeUri(), buildUpiUri()); }
-    function payAnyUpi(){ window.location.href = buildUpiUri(); }
-
-    function showQR(){ document.getElementById("qrModal").showModal(); }
-    function closeQR(){ document.getElementById("qrModal").close(); }
-
-    function openWhatsApp(){
-      const msg =
-`Hi! Maine payment kar diya hai ✅
-Product: ${NOTE}
-Amount: ₹${AMOUNT}
-UTR: _______
-
-Screenshot attach kar raha/rahi hu.`;
-      window.open(`https://wa.me/${WHATSAPP_NO}?text=${encodeURIComponent(msg)}`, "_blank");
-    }
-
-    // Tilt effect
-    (function previewTilt(){
-      const stage = document.getElementById("previewStage");
-      const floater = document.getElementById("previewFloat");
-      if(!stage || !floater) return;
-      let rafId=null;
-
-      function setTilt(rx, ry){
-        floater.style.transform = `translateY(-2px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    async function copyUpi(){
+      try{
+        await navigator.clipboard.writeText(UPI_ID);
+        setStatus("UPI copied ✅ Now paste in any UPI app and pay ₹49.");
+      }catch(e){
+        const temp = document.createElement("input");
+        temp.value = UPI_ID;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        setStatus("UPI copied ✅ Now paste in any UPI app and pay ₹49.");
       }
+    }
 
-      function onMove(cx, cy){
-        const r = stage.getBoundingClientRect();
-        const x = (cx - r.left) / r.width;
-        const y = (cy - r.top) / r.height;
-        const ry = (x - 0.5) * 10;
-        const rx = (0.5 - y) * 8;
-        if(rafId) cancelAnimationFrame(rafId);
-        rafId = requestAnimationFrame(()=>setTilt(rx, ry));
-      }
-
-      stage.addEventListener("mousemove", e=>onMove(e.clientX, e.clientY));
-      stage.addEventListener("touchmove", e=>{
-        const t = e.touches && e.touches[0];
-        if(t) onMove(t.clientX, t.clientY);
-      }, {passive:true});
-
-      stage.addEventListener("mouseleave", ()=>{ floater.style.transform=""; });
-      stage.addEventListener("touchend", ()=>{ floater.style.transform=""; });
-    })();
+    payBtn.addEventListener("click", openPayment);
+    copyBtn.addEventListener("click", copyUpi);
   </script>
 </body>
 </html>
