@@ -1,514 +1,385 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Reel Bundles — Hulku AI 500+ Reels Bundle</title>
+  <title>Reel Bundles • Hulku AI 500+ Reels Bundle</title>
   <style>
     :root{
-      --bg:#0b0f1a;
-      --card:#121a2b;
-      --muted:#9fb0d0;
-      --text:#eaf0ff;
-      --brand:#7c5cff;
-      --brand2:#22c55e;
-      --warn:#f59e0b;
-      --border:rgba(255,255,255,.10);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius:18px;
+      --bg:#05070f;
+      --card:#0b1220;
+      --muted:#9fb2d1;
+      --text:#e9f1ff;
+      --accent:#6ee7ff;
+      --good:#43e97b;
+      --danger:#ff5c7a;
+      --stroke:rgba(255,255,255,.08);
+      --shadow:0 18px 60px rgba(0,0,0,.55);
+      --radius:20px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(900px 500px at 10% 0%, rgba(124,92,255,.25), transparent 60%),
-        radial-gradient(700px 420px at 90% 10%, rgba(34,197,94,.18), transparent 60%),
-        var(--bg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:radial-gradient(900px 500px at 30% 10%, rgba(110,231,255,.12), transparent 60%),
+                 radial-gradient(900px 500px at 70% 30%, rgba(67,233,123,.10), transparent 60%),
+                 var(--bg);
       color:var(--text);
       min-height:100vh;
-      display:flex;
-      justify-content:center;
-      padding:22px 14px 40px;
     }
-    .wrap{width:min(980px,100%)}
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 6px 18px;
-    }
-    .brand{
-      display:flex; gap:10px; align-items:center;
-      font-weight:800; letter-spacing:.3px;
-    }
-    .logo{
-      width:40px;height:40px;border-radius:12px;
-      background: linear-gradient(135deg, rgba(124,92,255,1), rgba(34,197,94,1));
-      box-shadow: 0 10px 30px rgba(124,92,255,.25);
-      display:grid; place-items:center;
-      font-weight:900;
-    }
-    .pill{
-      font-size:12px;
-      color:var(--muted);
-      border:1px solid var(--border);
-      border-radius:999px;
-      padding:7px 10px;
-      background: rgba(255,255,255,.03);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-    }
-    @media (max-width: 880px){
-      .grid{grid-template-columns:1fr; }
-    }
-
-    .card{
-      background: rgba(18,26,43,.82);
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .card .pad{padding:18px}
-    h1{
-      margin:0 0 8px;
-      font-size:26px;
-      line-height:1.2;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:14px;
-      margin:0 0 16px;
-    }
-
-    .previewBox{
-      border:1px solid var(--border);
-      border-radius: 16px;
-      background: rgba(255,255,255,.03);
-      padding:14px;
-      margin: 0 0 14px;
-      position:relative;
-      overflow:hidden;
-    }
-    .previewLabel{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px;
-      margin-bottom:10px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .previewAnim{
-      width:100%;
-      aspect-ratio: 16/9;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background:
-        radial-gradient(140px 80px at 20% 30%, rgba(124,92,255,.45), transparent 60%),
-        radial-gradient(180px 100px at 80% 70%, rgba(34,197,94,.35), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      position:relative;
-      overflow:hidden;
-    }
-    .floatBadge{
-      position:absolute;
-      left:14px; top:14px;
-      padding:8px 10px;
-      font-size:12px;
-      border-radius:999px;
-      background: rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.10);
-      backdrop-filter: blur(8px);
-    }
-    .glow{
-      position:absolute;
-      width:220px; height:220px;
-      border-radius: 50%;
-      filter: blur(22px);
-      opacity:.55;
-      animation: drift 4.2s ease-in-out infinite alternate;
-      background: rgba(124,92,255,.55);
-      left:-40px; top:-60px;
-    }
-    .glow2{
-      position:absolute;
-      width:260px; height:260px;
-      border-radius: 50%;
-      filter: blur(28px);
-      opacity:.38;
-      animation: drift2 5.3s ease-in-out infinite alternate;
-      background: rgba(34,197,94,.45);
-      right:-80px; bottom:-90px;
-    }
-    @keyframes drift{
-      from{ transform: translate(0,0) }
-      to{ transform: translate(45px,35px) }
-    }
-    @keyframes drift2{
-      from{ transform: translate(0,0) }
-      to{ transform: translate(-55px,-35px) }
-    }
-
-    .priceRow{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      border:1px solid var(--border);
-      border-radius: 16px;
-      background: rgba(255,255,255,.03);
-      padding:14px;
-      margin-bottom:14px;
-    }
-    .price{
-      font-size:34px;
-      font-weight:900;
-      letter-spacing:.2px;
-    }
-    .strike{ color:rgba(255,255,255,.35); text-decoration:line-through; font-weight:700; font-size:14px}
-    .offer{ color: var(--brand2); font-weight:800; font-size:13px}
-    .list{
-      display:grid;
-      gap:10px;
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-    .list li{
-      display:flex; gap:10px; align-items:flex-start;
-      color: rgba(234,240,255,.92);
-      background: rgba(0,0,0,.18);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius: 14px;
-      padding:10px 12px;
-      font-size:14px;
-    }
-    .dot{
-      width:10px;height:10px;border-radius:50%;
-      background: var(--brand);
-      margin-top:5px;
-      box-shadow: 0 0 0 4px rgba(124,92,255,.15);
-      flex: 0 0 auto;
-    }
-
-    .btns{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-    .btn{
-      border:0;
-      border-radius: 16px;
-      padding:14px 14px;
-      font-weight:900;
-      font-size:15px;
-      cursor:pointer;
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      align-items:center;
-      transition: transform .08s ease, opacity .2s ease;
-      user-select:none;
-      text-decoration:none;
-    }
-    .btn:active{ transform: translateY(1px) scale(.99); }
-    .btnPrimary{
-      background: linear-gradient(135deg, var(--brand), #9a6bff);
-      color:white;
-    }
-    .btnWA{
-      background: linear-gradient(135deg, #25D366, #18b55a);
-      color: #06140c;
-    }
-    .btnGhost{
-      background: rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.12);
-      color: var(--text);
-    }
-
-    .small{
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.45;
-      margin-top:10px;
-    }
-    .warn{
-      color: #ffd79a;
-      font-size:12px;
-      background: rgba(245,158,11,.12);
-      border:1px solid rgba(245,158,11,.25);
-      padding:10px 12px;
-      border-radius: 14px;
-    }
-
-    .rightCard h2{
-      margin:0 0 8px;
-      font-size:18px;
-    }
-    .kv{
-      display:grid;
-      gap:10px;
-      margin-top:12px;
-    }
-    .kv .row{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      border-radius: 14px;
-      padding:10px 12px;
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      color: rgba(234,240,255,.92);
-      font-size:13px;
-    }
-    .kv .row span{color:var(--muted)}
-    .qrWrap{
-      margin-top:14px;
-      border:1px dashed rgba(255,255,255,.22);
-      border-radius: 16px;
-      padding:14px;
-      background: rgba(0,0,0,.18);
-    }
-    .qrWrap img{
-      width:100%;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      display:block;
-    }
-    .copyRow{
-      display:flex; gap:10px; margin-top:10px;
-    }
-    .copyRow input{
-      flex:1;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.14);
-      padding:12px 12px;
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      outline:none;
-      font-weight:700;
-    }
-    .toast{
-      position: fixed;
-      left:50%;
-      transform: translateX(-50%);
-      bottom: 18px;
-      background: rgba(0,0,0,.75);
-      border:1px solid rgba(255,255,255,.15);
-      color:white;
-      padding:10px 12px;
-      border-radius: 999px;
-      font-size:13px;
-      opacity:0;
-      pointer-events:none;
-      transition: opacity .25s ease;
-      z-index: 9999;
+    .wrap{max-width:980px;margin:0 auto;padding:18px 14px 70px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 14px;border:1px solid var(--stroke);border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      position:sticky;top:12px;z-index:5;
       backdrop-filter: blur(10px);
     }
-    .toast.show{ opacity:1; }
-    .hint{
-      margin-top:10px;
-      color: rgba(234,240,255,.85);
-      font-size:12px;
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background:linear-gradient(135deg, rgba(110,231,255,.35), rgba(67,233,123,.25));
+      display:grid;place-items:center;
+      border:1px solid var(--stroke);
+      font-weight:800;letter-spacing:.5px;
     }
-    .divider{
-      height:1px;
-      background: rgba(255,255,255,.08);
-      margin: 12px 0;
+    .brand h1{font-size:16px;margin:0;line-height:1.1}
+    .brand p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+    .chip{
+      font-size:12px;color:var(--text);
+      border:1px solid var(--stroke);
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.04);
+      white-space:nowrap;
+    }
+    .hero{
+      margin-top:16px;
+      padding:18px 18px 14px;
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+    }
+    .hero h2{margin:0 0 10px;font-size:34px;line-height:1.05}
+    .hero p{margin:0;color:var(--muted);font-size:14px;max-width:760px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} .hero h2{font-size:30px} }
+    .card{
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .cardHead{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 16px;
+      border-bottom:1px solid var(--stroke);
+    }
+    .cardHead .title{font-weight:700}
+    .tag{font-size:12px;color:var(--good);font-weight:700}
+    .cardBody{padding:14px 16px}
+
+    /* ✅ Preview image fix */
+    .previewBox{
+      width:100%;
+      height:240px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.03);
+      position:relative;
+    }
+    .previewImg{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .pillRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .pill{
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.03);
+      padding:10px 12px;border-radius:999px;
+      font-size:12px;color:var(--text);
+    }
+    .priceBox{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
+      padding:14px 16px;
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      margin-top:12px;
+    }
+    .priceBig{font-size:44px;font-weight:900;line-height:1}
+    .priceSmall{color:var(--muted);font-size:12px;margin-top:6px}
+    .btnRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      border:none;
+      border-radius:16px;
+      padding:14px 14px;
+      font-weight:800;
+      cursor:pointer;
+      flex:1;
+      min-width:140px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    .btnPrimary{
+      background:linear-gradient(135deg, rgba(110,231,255,.95), rgba(67,233,123,.90));
+      color:#041016;
+    }
+    .btnGhost{
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      border:1px solid var(--stroke);
+      box-shadow:none;
+    }
+    .note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.4;
+    }
+    .list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+    .li{
+      padding:12px 12px;
+      border:1px solid var(--stroke);
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+      display:flex;align-items:flex-start;gap:10px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:99px;margin-top:4px;
+      background:linear-gradient(135deg, rgba(110,231,255,.95), rgba(67,233,123,.90));
+      flex:0 0 auto;
+    }
+
+    /* Modal */
+    .modalWrap{
+      position:fixed;inset:0;display:none;place-items:center;
+      background:rgba(0,0,0,.55);
+      padding:18px;
+      z-index:20;
+    }
+    .modal{
+      width:min(520px,100%);
+      border:1px solid var(--stroke);
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(14,24,43,.96), rgba(8,12,24,.96));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .modalTop{
+      padding:14px 16px;
+      border-bottom:1px solid var(--stroke);
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .modalTop b{font-size:14px}
+    .x{
+      background:transparent;border:1px solid var(--stroke);
+      color:var(--text);border-radius:12px;
+      padding:6px 10px;cursor:pointer;
+    }
+    .modalBody{padding:14px 16px}
+    .qrBox{
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+    }
+    .qrBox img{width:100%;height:auto;display:block}
+    .modalActions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .warn{
+      margin-top:10px;
+      font-size:12px;
+      color:#ffd7de;
+      background:rgba(255,92,122,.10);
+      border:1px solid rgba(255,92,122,.25);
+      padding:10px 12px;border-radius:14px;
+      line-height:1.45;
+    }
+    .ok{
+      margin-top:10px;
+      font-size:12px;
+      color:#d7ffee;
+      background:rgba(67,233,123,.10);
+      border:1px solid rgba(67,233,123,.25);
+      padding:10px 12px;border-radius:14px;
+      line-height:1.45;
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <header>
+    <div class="topbar">
       <div class="brand">
         <div class="logo">RB</div>
         <div>
-          <div style="font-size:16px;">Reel Bundles</div>
-          <div style="font-size:12px;color:var(--muted);font-weight:600;">Instant digital delivery via WhatsApp</div>
+          <h1>Reel Bundles</h1>
+          <p>Instant digital delivery via WhatsApp</p>
         </div>
       </div>
-      <div class="pill">Secure UPI • ₹49 only</div>
-    </header>
+      <div class="chip">Secure UPI • ₹49 only</div>
+    </div>
 
-    <div class="grid">
-      <section class="card">
-        <div class="pad">
-          <h1>Hulku AI 500+ Reels Bundle 🔥</h1>
-          <p class="sub">Pay with any UPI app. Payment ke baad “Get Link on WhatsApp” dabao — Drive link message me aa jayega.</p>
+    <section class="hero">
+      <h2>Hulku AI 500+ Reels Bundle 🔥</h2>
+      <p>Pay with any UPI app. Payment ke baad “Get on WhatsApp” dabao — aur apna <b>payment screenshot + UTR/Txn ID</b> WhatsApp pe bhejo. Verified hone ke baad delivery ho jayegi.</p>
 
-          <div class="previewBox">
-            <div class="previewLabel">
-              <div>Bundle Preview (Animated)</div>
-              <div style="display:flex;gap:8px;align-items:center;">
-                <span class="offer">Instant Use</span>
-                <span class="strike">₹199</span>
+      <div class="grid">
+        <div class="card">
+          <div class="cardHead">
+            <div class="title">Bundle Preview</div>
+            <div class="tag">Animated / HD</div>
+          </div>
+          <div class="cardBody">
+            <div class="previewBox">
+              <img class="previewImg" src="./preview1.png" alt="Bundle Preview">
+            </div>
+
+            <div class="pillRow">
+              <div class="pill">500+ Reels • Trending Templates</div>
+              <div class="pill">Instant Use</div>
+              <div class="pill">High Quality</div>
+            </div>
+
+            <div class="priceBox">
+              <div>
+                <div style="font-weight:800">Today's Price</div>
+                <div class="priceBig">₹49</div>
+                <div class="priceSmall">Limited Offer • UPI apps supported</div>
+              </div>
+              <div style="text-align:right">
+                <div style="color:var(--muted);font-size:12px;text-decoration:line-through;">₹199</div>
+                <div style="font-weight:900;color:var(--good);">75% OFF</div>
               </div>
             </div>
-            <div class="previewAnim" aria-label="Preview animation">
-              <div class="glow"></div>
-              <div class="glow2"></div>
-              <div class="floatBadge">500+ Reels • Trending Templates</div>
+
+            <div class="btnRow">
+              <button class="btn btnPrimary" onclick="startPayment()">Pay Now (UPI)</button>
+              <button class="btn btnGhost" onclick="openModal()">Scan QR</button>
             </div>
-          </div>
 
-          <div class="priceRow">
-            <div>
-              <div style="color:var(--muted);font-size:12px;font-weight:800;">Today’s Price</div>
-              <div class="price">₹49</div>
-            </div>
-            <div style="text-align:right;">
-              <div class="offer">Limited Offer</div>
-              <div style="color:var(--muted);font-size:12px;">UPI apps supported</div>
-            </div>
-          </div>
-
-          <ul class="list">
-            <li><span class="dot"></span> 500+ ready-to-post reels (high quality)</li>
-            <li><span class="dot"></span> Daily posting ke liye perfect bundle</li>
-            <li><span class="dot"></span> Instant access (WhatsApp par link milega)</li>
-            <li><span class="dot"></span> Beginner-friendly — bas download & post</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <div class="btns">
-            <button class="btn btnPrimary" id="payBtn">Pay Now (UPI)</button>
-            <button class="btn btnWA" id="waBtn">Payment Done ✅ Get Link on WhatsApp</button>
-            <button class="btn btnGhost" id="openChromeBtn">If UPI not opening → Open in Chrome</button>
-          </div>
-
-          <p class="small">
-            Note: Instagram/WhatsApp in-app browser me kabhi-kabhi UPI app direct open nahi hota.
-            Agar Pay Now se UPI app open na ho, to “Open in Chrome” pe tap karo ya niche QR/copy UPI use karo.
-          </p>
-
-          <div class="warn" id="statusBox" style="display:none;"></div>
-        </div>
-      </section>
-
-      <aside class="card rightCard">
-        <div class="pad">
-          <h2>Payment Details</h2>
-          <div class="kv">
-            <div class="row"><div><b>UPI ID</b><div class="hint" style="margin:0">Pay to this UPI</div></div><span id="upiShow">9699252433-2@ybl</span></div>
-            <div class="row"><div><b>Name</b></div><span id="nameShow">Reel Bundles</span></div>
-            <div class="row"><div><b>Amount</b></div><span id="amtShow">49</span></div>
-          </div>
-
-          <div class="qrWrap" id="qrSection">
-            <div style="font-weight:900;margin-bottom:10px;">QR (Backup option)</div>
-            <img src="qr.png" alt="UPI QR" />
-            <div class="copyRow">
-              <input id="upiInput" value="9699252433-2@ybl" readonly />
-              <button class="btn btnGhost" id="copyBtn" style="padding:12px 14px;">Copy</button>
-            </div>
-            <div class="small" style="margin-top:10px;">
-              QR se pay karne par kuch apps “gallery limit” message dikha sakte hain — isliye primary option “Pay Now” best hai.
+            <div class="note">
+              Note: Payment successful hone ke baad WhatsApp pe <b>payment screenshot + UTR/Txn ID</b> bhejna mandatory hai.
             </div>
           </div>
         </div>
-      </aside>
+
+        <div class="card">
+          <div class="cardHead">
+            <div class="title">What you get</div>
+            <div class="tag">Ready-to-post</div>
+          </div>
+          <div class="cardBody">
+            <ul class="list">
+              <li class="li"><span class="dot"></span><div><b>500+ ready reels</b><div class="priceSmall">Daily posting ke liye perfect</div></div></li>
+              <li class="li"><span class="dot"></span><div><b>Organized folders</b><div class="priceSmall">Category wise content</div></div></li>
+              <li class="li"><span class="dot"></span><div><b>Fast delivery</b><div class="priceSmall">WhatsApp verification ke baad</div></div></li>
+              <li class="li"><span class="dot"></span><div><b>Support</b><div class="priceSmall">Issue aaya to help milegi</div></div></li>
+            </ul>
+
+            <div style="margin-top:12px" class="warn">
+              ⚠️ Important: Payment done ke baad WhatsApp pe <b>Screenshot + UTR/Txn ID</b> bhejo, tabhi delivery milegi.
+            </div>
+
+            <div class="btnRow" style="margin-top:12px">
+              <button class="btn btnPrimary" onclick="openWhatsApp(true)">Get on WhatsApp</button>
+              <button class="btn btnGhost" onclick="copyUPI()">Copy UPI ID</button>
+            </div>
+
+            <div id="copyMsg" class="ok" style="display:none">✅ UPI ID copied!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="modalWrap" class="modalWrap" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modalTop">
+        <b>Scan to Pay (₹49)</b>
+        <button class="x" onclick="hideModal()">Close</button>
+      </div>
+      <div class="modalBody">
+        <div class="qrBox">
+          <img src="./qr.png" alt="UPI QR">
+        </div>
+
+        <div class="modalActions">
+          <button class="btn btnPrimary" onclick="startPayment()">Pay via UPI App</button>
+          <button class="btn btnGhost" onclick="openWhatsApp(false)">WhatsApp (After Pay)</button>
+        </div>
+
+        <div class="note">
+          QR image show na ho to ensure karein: <b>qr.png</b> same folder me ho.
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="toast" id="toast">Copied!</div>
-
   <script>
-    // ✅ FINAL CONFIG (Sab set kar diya)
     const CONFIG = {
+      brand: "Reel Bundles",
+      product: "Hulku AI 500+ Reels Bundle",
+      amount: 49,
       upiId: "9699252433-2@ybl",
       payeeName: "Reel Bundles",
-      amount: "49",
-      note: "Hulku AI 500+ Reels Bundle",
-      // ✅ WhatsApp Number (country code ke saath, without +)
-      whatsappNumber: "919699252433",
-      // ✅ Drive Link
-      driveLink: "https://drive.google.com/drive/folders/1d6UUE7y",
+      whatsappNumber: "919699252433"
     };
 
-    const $ = (id) => document.getElementById(id);
-
-    function showToast(msg){
-      const t = $("toast");
-      t.textContent = msg;
-      t.classList.add("show");
-      setTimeout(()=>t.classList.remove("show"), 1400);
+    function buildUPILink() {
+      const params = new URLSearchParams({
+        pa: CONFIG.upiId,
+        pn: CONFIG.payeeName,
+        am: String(CONFIG.amount),
+        cu: "INR",
+        tn: `${CONFIG.product} - ${CONFIG.brand}`
+      });
+      return `upi://pay?${params.toString()}`;
     }
 
-    function showStatus(msg){
-      const b = $("statusBox");
-      b.style.display = "block";
-      b.textContent = msg;
-      setTimeout(()=>{ b.style.display = "none"; }, 6000);
+    function startPayment() {
+      window.location.href = buildUPILink();
+      setTimeout(() => openModal(), 900);
     }
 
-    function buildUPIUrl(){
-      const pa = encodeURIComponent(CONFIG.upiId);
-      const pn = encodeURIComponent(CONFIG.payeeName);
-      const am = encodeURIComponent(CONFIG.amount);
-      const tn = encodeURIComponent(CONFIG.note);
-      return `upi://pay?pa=${pa}&pn=${pn}&am=${am}&cu=INR&tn=${tn}`;
+    function openWhatsApp(isAfterPay) {
+      const text = isAfterPay
+        ? `Hi! Payment done for "${CONFIG.product}" (₹${CONFIG.amount}).\n\n✅ I will send payment screenshot + UTR/Txn ID here.\n\nPlease verify and confirm.`
+        : `Hi! I want to buy "${CONFIG.product}" (₹${CONFIG.amount}).\n\nI will pay now and then send payment screenshot + UTR/Txn ID here.`;
+
+      const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
     }
 
-    function openUPI(){
-      const upiURL = buildUPIUrl();
-      window.location.href = upiURL;
-
-      setTimeout(() => {
-        $("qrSection").scrollIntoView({behavior:"smooth"});
-        showStatus("Agar UPI app open nahi hua, to niche QR ya Copy UPI use karke payment karo. Payment ke baad WhatsApp button dabao.");
-      }, 1200);
+    function copyUPI() {
+      navigator.clipboard.writeText(CONFIG.upiId).then(() => {
+        const el = document.getElementById("copyMsg");
+        el.style.display = "block";
+        setTimeout(() => el.style.display = "none", 1800);
+      }).catch(() => {
+        alert("Copy failed. UPI ID: " + CONFIG.upiId);
+      });
     }
 
-    function openWhatsAppWithLink(){
-      const msg =
-`✅ Payment Done!
-
-📦 Your Drive Link:
-${CONFIG.driveLink}
-
-UPI: ${CONFIG.upiId}
-Amount: ₹${CONFIG.amount}
-
-(If you haven't paid yet, please pay first.)`;
-
-      const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
-      window.location.href = waUrl;
+    function openModal() {
+      document.getElementById("modalWrap").style.display = "grid";
     }
-
-    function openInChrome(){
-      showStatus("Top right 3 dots → 'Open in browser' / Chrome. Then Pay Now try again.");
+    function hideModal() {
+      document.getElementById("modalWrap").style.display = "none";
     }
-
-    async function copyUPI(){
-      try{
-        await navigator.clipboard.writeText(CONFIG.upiId);
-        showToast("UPI Copied ✅");
-      }catch(e){
-        const inp = $("upiInput");
-        inp.focus();
-        inp.select();
-        document.execCommand("copy");
-        showToast("UPI Copied ✅");
-      }
+    function closeModal(e){
+      if(e.target.id === "modalWrap") hideModal();
     }
-
-    function init(){
-      $("upiShow").textContent = CONFIG.upiId;
-      $("nameShow").textContent = CONFIG.payeeName;
-      $("amtShow").textContent = CONFIG.amount;
-      $("upiInput").value = CONFIG.upiId;
-
-      $("payBtn").addEventListener("click", openUPI);
-      $("waBtn").addEventListener("click", openWhatsAppWithLink);
-      $("openChromeBtn").addEventListener("click", openInChrome);
-      $("copyBtn").addEventListener("click", copyUPI);
-    }
-
-    init();
   </script>
 </body>
 </html>
